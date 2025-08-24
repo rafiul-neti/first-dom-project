@@ -29,8 +29,8 @@
 
     <div class="bg-white p-5">
         <div>
-        <h1 class="font-bold text-xl mt-5">🔥 Welcome to Payooo!</h1>
-        <p class="text-[#08080880] my-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <h1 class="font-bold text-xl mt-5">🔥 Welcome to Payooo!</h1>
+            <p class="text-[#08080880] my-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
         </div>
 
 
@@ -59,138 +59,153 @@
                 <img src="assets/transaction1.png" class="mx-auto" alt="">
                 <h2>Transactions</h2>
             </div>
+        </div>
+
     </div>
 
-
-    <div class="mt-7 bg-[#f4f5f7">
-
+    <div class="mt-7">
         <div id="add-money-parent">
-                    <!-- add money feature -->
-            <h2 class="font-bold text-xl">Add Money</h2>
-            <div class="p-5 bg-white rounded-lg">
-                <form>
-                 <div class="">
-                    <label class="font-semibold">Select A Bank</label><br>
-                    <select class="select bg-[#f4f5f7] rounded-3xl my-3 w-full">
-                        <option disabled selected>Select A Bank</option>
-                        <option>AB Bank</option>
-                        <option>AB Bank</option>
-                        <option>AB Bank</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="font-semibold">Bank Account Number</label><br>
-                    <input id="account-num" type="number" placeholder="Enter 11 Digit Account Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                </div>
-                <div>
-                    <label class="font-semibold">Amount to Add</label><br>
-                    <input id="add-amount" type="text" placeholder="Enter Amount" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                </div>
-                <div>
-                    <label class="font-semibold">4 Digit Pin</label><br>
-                    <input id="valid-pin" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
+                <h2 class="font-bold text-xl">Add Money</h2>
+                <div class="p-5 bg-white rounded-lg">
+                    <form>
+                        <div class="">
+                            <label class="font-semibold">Select A Bank</label><br>
+                            <select class="select bg-[#f4f5f7] rounded-3xl my-3 w-full">
+                                <option disabled selected>Select A Bank</option>
+                                <option>AB Bank</option>
+                                <option>AB Bank</option>
+                                <option>AB Bank</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Bank Account Number</label><br>
+                            <input id="account-num" type="number" placeholder="Enter 11 Digit Account Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Amount to Add</label><br>
+                            <input id="add-amount" type="text" placeholder="Enter Amount" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div>
+                            <label class="font-semibold">4 Digit Pin</label><br>
+                            <input id="valid-pin" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
                     
+                        </div>
+                        <div class="mt-2">
+                            <button id="add-money-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Add Money</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mt-2">
-                    <button id="add-money-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Add Money</button>
-                </div>
-                </form>
             </div>
-        </div>
-           
-    </div>
 
-    <div id="cash-out-parent">
-         <h2 class="font-bold text-xl">Cash Out</h2>
-            <div class="p-5 bg-white rounded-lg">
-                <form>
+            <div id="cash-out-parent">
+                <h2 class="font-bold text-xl">Cash Out</h2>
+                <div class="p-5 bg-white rounded-lg">
+                    <form>
                     
-                    <div>
-                        <label class="font-semibold">Agent Number</label><br>
-                        <input id="agent-num" type="number" placeholder="Enter 11 Digit Agent Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                    </div>
-                    <div>
-                        <label class="font-semibold">Amount</label><br>
-                        <input id="cashout-amount" type="text" placeholder="Enter Amount to Withdraw" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                    </div>
+                        <div>
+                            <label class="font-semibold">Agent Number</label><br>
+                            <input id="agent-num" type="number" placeholder="Enter 11 Digit Agent Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Amount</label><br>
+                            <input id="cashout-amount" type="text" placeholder="Enter Amount to Withdraw" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
                         
                     
-                    <div class="">
-                        <label class="font-semibold">Pin Number</label><br>
-                        <input id="pin-c-out" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
-                    </div>
-                    <div class="mt-2">
-                        <button id="cash-out-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Withdraw Money</button>
-                    </div>
-                </form>
+                        <div class="">
+                            <label class="font-semibold">Pin Number</label><br>
+                            <input id="pin-c-out" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
+                        </div>
+                        <div class="mt-2">
+                            <button id="cash-out-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Withdraw Money</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-    </div>
 
-    <div id="transfer-money-parent">
-         <h2 class="font-bold text-xl">Transfer Money</h2>
-            <div class="p-5 bg-white rounded-lg">
-                <form>
+            <div id="transfer-money-parent">
+                <h2 class="font-bold text-xl">Transfer Money</h2>
+                <div class="p-5 bg-white rounded-lg">
+                    <form>
                     
-                    <div>
-                        <label class="font-semibold">User Account Number</label><br>
-                        <input id="trans-num" type="number" placeholder="Enter 11 Digit Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                    </div>
-                    <div>
-                        <label class="font-semibold">Amount</label><br>
-                        <input id="cashout-amount" type="text" placeholder="Enter Amount to Transfer" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                    </div>
+                        <div>
+                            <label class="font-semibold">User Account Number</label><br>
+                            <input id="trans-num" type="number" placeholder="Enter 11 Digit Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Amount</label><br>
+                            <input id="transfer-amount" type="text" placeholder="Enter Amount to Transfer" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
                         
                     
-                    <div class="">
-                        <label class="font-semibold">Pin Number</label><br>
-                        <input id="pin-trans" type="number" placeholder="Enter 4 Digit Pin Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
-                    </div>
-                    <div class="mt-2">
-                        <button id="transfer-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Send Now</button>
-                    </div>
-                </form>
+                        <div class="">
+                            <label class="font-semibold">Pin Number</label><br>
+                            <input id="pin-trans" type="number" placeholder="Enter 4 Digit Pin Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
+                        </div>
+                        <div class="mt-2">
+                            <button id="transfer-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Send Now</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-    </div>
 
-    <div id="pay-bill-parent">
-        <h2 class="font-bold text-xl">
-            Pay Bill
-        </h2>
-        <div class="p-5 bg-white rounded-lg">
-            <form>
-                 <div class="">
-                    <label class="font-semibold">Select To Pay</label><br>
-                    <select class="select bg-[#f4f5f7] rounded-3xl my-3 w-full">
-                        <option disabled selected>Select A Payee</option>
-                        <option>Electricity</option>
-                        <option>Internet</option>
-                        <option>Credit Card's Bill</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="font-semibold">Biller ID/Account Number</label><br>
-                    <input id="biller-id" type="number" placeholder="Enter Biller ID/Account Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                </div>
-                <div class="">
-                    <label class="font-semibold">Amount to Pay</label><br>
-                    <input id="pay-amount" type="text" placeholder="Enter Amount to Pay" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
-                </div>
-                <div>
-                    <label class="font-semibold">Pin Number</label><br>
-                    <input id="pay-pin" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
+            <div id="bonus-parent">
+                    <h2 class="font-bold text-xl">
+                        Get Bonus
+                    </h2>
+                    <div class="p-5 bg-white rounded-lg">
+                        <form>
+                            <div>
+                                <label class="font-semibold">Enter Bonus Coupon</label><br>
+                                <input id="coupon" type="text" placeholder="Enter Your Coupon" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>   
+                            </div>
+                            <div class="mt-2">
+                                <button id="bonus-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Get Bonus</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+
+            <div id="pay-bill-parent">
+                <h2 class="font-bold text-xl">
+                    Pay Bill
+                </h2>
+                <div class="p-5 bg-white rounded-lg">
+                    <form>
+                        <div class="">
+                            <label class="font-semibold">Select To Pay</label><br>
+                            <select class="select bg-[#f4f5f7] rounded-3xl my-3 w-full">
+                                <option disabled selected>Select A Payee</option>
+                                <option>Electricity</option>
+                                <option>Internet</option>
+                                <option>Credit Card's Bill</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Biller ID/Account Number</label><br>
+                            <input id="biller-id" type="number" placeholder="Enter Biller ID/Account Number" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div class="">
+                            <label class="font-semibold">Amount to Pay</label><br>
+                            <input id="pay-amount" type="text" placeholder="Enter Amount to Pay" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/>
+                        </div>
+                        <div>
+                            <label class="font-semibold">Pin Number</label><br>
+                            <input id="pay-pin" type="number" placeholder="Enter 4 Digit Pin" class="input bg-[#f4f5f7] rounded-3xl my-3 w-full"/><br>
                     
+                        </div>
+                        <div class="mt-2">
+                            <button id="pay-bill-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Pay Now</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mt-2">
-                    <button id="pay-bill-btn" class="btn w-full rounded-3xl bg-[#0874F2] text-xl text-white p-1">Pay Now</button>
-                </div>
-            </form>
-        </div>
+            </div>
     </div>
 
     
     
 
-
+    
 
 
     <!-- javascript scripts -->
