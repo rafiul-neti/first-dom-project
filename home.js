@@ -31,10 +31,9 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
         availableBalance += addAmount
         document.getElementById("available-balance").innerText = availableBalance
     } else {
-        alert("Please Provide Valid Informations.")
+        alert("Please Provide Valid Information.")
     }
 })
-
 
 // cash out
 
@@ -109,3 +108,9 @@ document.getElementById("bill-card").addEventListener("click", function () {
 
   cardsToggle("pay-bill-parent");
 });
+
+document.getElementById("transaction-card").addEventListener("click", function () {
+    cardStyle("transaction-card");
+
+    cardsToggle("transaction-parent")
+})
