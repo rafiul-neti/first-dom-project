@@ -1,0 +1,10 @@
+.cards{
+    border:2px solid gray;
+    padding: 20px 16px;
+    border-radius: 20px;
+}
+
+.active-card {
+    border: 2px solid #0874f2;
+    background-color: #0874F20D;
+}
