@@ -1,5 +1,4 @@
 // activate style on cards 
-
 function cardStyle(id) {
     const sharedStyles = document.getElementsByClassName("cards")
 
@@ -68,18 +67,45 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
     }
 })
 
-// toggle
+// card toggling function
+
+function cardsToggle(id) {
+    const formsToggle = document.getElementsByClassName("all-forms")
+
+    for (const form of formsToggle) {
+        form.style.display = "none"
+    }
+    document.getElementById(id).style.display = "block";
+}
+
+// card toggling event listener
 
 document.getElementById("add-money-card").addEventListener("click", function () {
     cardStyle("add-money-card")
 
-    document.getElementById("cash-out-parent").style.display = "none";
-    document.getElementById("add-money-parent").style.display = "block"
+    cardsToggle("add-money-parent")
 })
 
 document.getElementById("cash-out-card").addEventListener("click", function () {
-        cardStyle("cash-out-card");
+    cardStyle("cash-out-card");
 
-    document.getElementById("add-money-parent").style.display = "none";
-    document.getElementById("cash-out-parent").style.display = "block";
+    cardsToggle("cash-out-parent");
 })
+
+document.getElementById("transfer-card").addEventListener("click", function () {
+  cardStyle("transfer-card");
+
+  cardsToggle("transfer-money-parent");
+});
+
+document.getElementById("bonus-card").addEventListener("click", function () {
+  cardStyle("bonus-card");
+
+  cardsToggle("bonus-parent");
+});
+
+document.getElementById("bill-card").addEventListener("click", function () {
+  cardStyle("bill-card");
+
+  cardsToggle("pay-bill-parent");
+});
