@@ -18,6 +18,8 @@ function pin4Digit(id) {
 
 const completedTransactions = [];
 
+// add money form button
+
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
     e.preventDefault()
 
@@ -50,9 +52,11 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
         time : new Date().toLocaleTimeString()
     }
     completedTransactions.push(data)
+
+    document.getElementById("add-money-form").reset();
 })
 
-// cash out
+// cash out form button
 
 document.getElementById("cash-out-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -91,9 +95,11 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
       time: new Date().toLocaleTimeString(),
     };
     completedTransactions.push(data);
+
+    document.getElementById("cash-out-form").reset();
 })
 
-// transfer money button
+// transfer money form button
 
 document.getElementById("transfer-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -128,9 +134,11 @@ document.getElementById("transfer-btn").addEventListener("click", function (e) {
       time: new Date().toLocaleTimeString(),
     };
     completedTransactions.push(data);
+
+    document.getElementById("transfer-form").reset();
 })
 
-// pay bill button
+// pay bill form button
 
 document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -159,6 +167,8 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
       time: new Date().toLocaleTimeString(),
     };
     completedTransactions.push(data);
+
+    document.getElementById("pay-bill-form").reset();
 })
 
 // card toggling function
