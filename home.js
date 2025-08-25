@@ -130,6 +130,37 @@ document.getElementById("transfer-btn").addEventListener("click", function (e) {
     completedTransactions.push(data);
 })
 
+// pay bill button
+
+document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
+    e.preventDefault()
+
+    let billBalance = Number(document.getElementById("available-balance").innerText)
+
+    const amount = Number(document.getElementById("pay-amount").value)
+
+    if (amount <= 0 || amount > billBalance) {
+        return alert("Invalid Amount")
+    }
+
+    const rightPin = "1234"
+
+    const pin = document.getElementById("pay-pin").value
+
+    if (pin === rightPin) {
+        billBalance -= amount
+        document.getElementById("available-balance").innerText = billBalance
+    } else {
+        alert ("Invalid Credentials")
+    }
+
+    const data = {
+      name: "Pay Bill",
+      time: new Date().toLocaleTimeString(),
+    };
+    completedTransactions.push(data);
+})
+
 // card toggling function
 
 function cardsToggle(id) {
