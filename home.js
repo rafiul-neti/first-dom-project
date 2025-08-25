@@ -35,6 +35,10 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 
     const addAmount = Number(document.getElementById("add-amount").value);
 
+    if (addAmount <= 0) {
+        return alert("Invalid Amount")
+    }
+
     if (validPin === pinNum) {
         availableBalance += addAmount
         document.getElementById("available-balance").innerText = availableBalance
@@ -69,6 +73,11 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
       document.getElementById("cashout-amount").value
     );
 
+    if (cashOutAmount <= 0 ||
+        cashOutAmount > usableBalance) {
+        return alert("Insufficient Funds")
+    }
+
     const validPin = Number(document.getElementById("pin-c-out").value)
 
     if (validPin === pinNum) {
@@ -100,6 +109,11 @@ document.getElementById("transfer-btn").addEventListener("click", function (e) {
     }
 
     const transferAmount = Number(document.getElementById("transfer-amount").value)
+
+    if (transferAmount <= 0 ||
+        transferAmount > mainBalance) {
+      return alert("Insufficient Funds");
+    }
 
     const pin = "1234"
     
