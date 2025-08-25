@@ -8,7 +8,15 @@ function cardStyle(id) {
     document.getElementById(id).classList.add("active-card");
 }
 
+// pin-number function
 
+function pin4Digit(id) {
+    return document.getElementById(id).value;
+}
+
+// transactions data
+
+const completedTransactions = [];
 
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -33,6 +41,11 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
     } else {
         alert("Please Provide Valid Information.")
     }
+    const data = {
+        name : "Add Money",
+        time : new Date().toLocaleTimeString()
+    }
+    completedTransactions.push(data)
 })
 
 // cash out
@@ -64,6 +77,43 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
     } else {
         alert("Please Check Your Info & Provide Correct Info")
     }
+    const data = {
+      name: "Cash Out",
+      time: new Date().toLocaleTimeString(),
+    };
+    completedTransactions.push(data);
+})
+
+// transfer money button
+
+document.getElementById("transfer-btn").addEventListener("click", function (e) {
+    e.preventDefault()
+
+    let mainBalance = Number(
+      document.getElementById("available-balance").innerText
+    );
+
+    const accountNumber = document.getElementById("trans-num").value
+
+    if (accountNumber.length < 11) {
+        return alert("Please Provide a Valid Account Number")
+    }
+
+    const transferAmount = Number(document.getElementById("transfer-amount").value)
+
+    const pin = "1234"
+    
+    if (pin4Digit("pin-trans") === pin) {
+        mainBalance -= transferAmount
+        document.getElementById("available-balance").innerText = mainBalance;
+    } else {
+        alert("Please Enter Valid Credentials")
+    }
+    const data = {
+      name: "Transfer Money",
+      time: new Date().toLocaleTimeString(),
+    };
+    completedTransactions.push(data);
 })
 
 // card toggling function
@@ -112,5 +162,27 @@ document.getElementById("bill-card").addEventListener("click", function () {
 document.getElementById("transaction-card").addEventListener("click", function () {
     cardStyle("transaction-card");
 
-    cardsToggle("transaction-parent")
-})
+    cardsToggle("transaction-parent");
+
+    const transactionsData = document.getElementById("transaction-container");
+    transactionsData.innerText = "";
+
+    for (const transaction of completedTransactions) {
+      const newDiv = document.createElement("div");
+
+      newDiv.innerHTML = `
+            <div class="bg-white flex justify-between items-center p-3 rounded-xl mt-4">
+                    <div class="flex">
+                        <img src="assets/wallet1.png" class="p-3 bg-[#f4f5f7] rounded-full" alt="">
+                        <div class="ml-2">
+                            <h1>${transaction.name}</h1>
+                            <p>${transaction.time}</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+        `;
+
+      transactionsData.appendChild(newDiv);
+    }
+  });
